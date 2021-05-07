@@ -8,7 +8,7 @@ js最佳实践及常见问题解决方法
 
 [删除无用代码，而不是注释它](https://github.com/moyangzhan/js-jump/issues/2)
 
-为参数设置默认值
+[为方法参数设置默认值](https://github.com/moyangzhan/js-jump/issues/3)
 
 设置圈复杂度
 
