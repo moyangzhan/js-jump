@@ -65,3 +65,15 @@ try-catch/promise.catch时不能吃掉错误
 捕捉promise中异步操作的错误，使用原始promise的reject而不是直接throw
 
 promise中reject后面不应再有执行语句
+
+五、常用算法
+
+1.排序
+
+2.去重
+
+3.查找
+
+列表查找
+
+树的查找
