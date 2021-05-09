@@ -10,13 +10,13 @@ js最佳实践及常见问题解决方法
 
 [为方法入参设置默认值](https://github.com/moyangzhan/js-jump/issues/3)
 
-设置圈复杂度
+[设置圈复杂度](https://github.com/moyangzhan/js-jump/issues/4)
 
-限定文件最大代码行数
+[限定文件最大代码行数](https://github.com/moyangzhan/js-jump/issues/5)
 
-明确指出url请求所需参数及默认值
+[明确指出http请求所需参数及默认值](https://github.com/moyangzhan/js-jump/issues/6)
 
-尽量使用===，避免使用==
+[优先使用===或Object.is()，尽量避免使用==](https://github.com/moyangzhan/js-jump/issues/7)
 
 避免多重嵌套
 
