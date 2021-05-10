@@ -1,6 +1,6 @@
 # js-jump
 
-js最佳实践及常见问题解决方法
+js开发实践及常见问题解决方法
 
 一、规范
 
@@ -18,7 +18,7 @@ js最佳实践及常见问题解决方法
 
 [优先使用===或Object.is()，尽量避免使用==](https://github.com/moyangzhan/js-jump/issues/7)
 
-避免多重嵌套
+[避免多重嵌套](https://github.com/moyangzhan/js-jump/issues/8)
 
 二、性能
 
