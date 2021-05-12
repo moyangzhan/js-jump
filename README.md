@@ -22,7 +22,7 @@ js开发实践及常见问题解决方法
 
 二、性能
 
-节流
+[节流](https://github.com/moyangzhan/js-jump/issues/9)
 
 防抖
 
