@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>节流</title>
+    <script type="text/javascript" src="./throttle.js"></script>
+    <script type="text/javascript">
+      let throttleFun = null;
+      let normalClickCount = 0;
+      let throttleBtnCount = 0;
+      function getCurTime() {
+        let now = new Date();
+        return (
+          now.getMinutes() +
+          ":" +
+          now.getSeconds() +
+          "." +
+          now.getMilliseconds()
+        );
+      }
+      function normalBtnClick() {
+        normalClickCount++;
+        let resultZone = document.querySelector("#normalClickRecords");
+        let span = document.createElement("span");
+        span.innerHTML = `<br/>${getCurTime()}:<span>普通按钮第${normalClickCount}次点击 ==> <span>`;
+        resultZone.appendChild(span);
+
+        runInNormal(
+          "#normalRunRecords",
+          `<br/>${getCurTime()}:<span>普通按钮第${normalClickCount}次事件运行<span>`
+        );
+      }
+      function throttleBtnClick() {
+        throttleBtnCount++;
+        let resultZone = document.querySelector("#throttleClickRecords");
+        let span = document.createElement("span");
+        span.innerHTML = `<br/>${getCurTime()}:<span>限流按钮第${throttleBtnCount}次点击 ==> <span>`;
+        resultZone.appendChild(span);
+
+        throttleFun(
+          "#throttleRunRecords",
+          `<br/>${getCurTime()}:<span>限流按钮第${throttleBtnCount}次事件运行<span>`
+        );
+      }
+
+      function runInNormal(resultSelector, runTxt) {
+        let resultZone = document.querySelector(resultSelector);
+        let span = document.createElement("span");
+        span.innerHTML = runTxt;
+        resultZone.appendChild(span);
+      }
+
+      function runInThrottle(resultSelector, runTxt) {
+        let resultZone = document.querySelector(resultSelector);
+        let span = document.createElement("span");
+        span.innerHTML = runTxt;
+        resultZone.appendChild(span);
+      }
+
+      function init() {
+        throttleFun = throttle(runInThrottle, 1000);
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <div
+      style="
+        border: 1px solid lightgray;
+        min-height: 200px;
+        max-height: 300px;
+        overflow: auto;
+      "
+    >
+      <button id="normalBtn" onclick="normalBtnClick()">
+        普通按钮(疯狂点击)
+      </button>
+      <div>
+        <div id="normalClickRecords" style="width: 400px; float: left"></div>
+        <div id="normalRunRecords" style="float: left"></div>
+      </div>
+    </div>
+    <div
+      style="
+        border: 1px solid lightgray;
+        min-height: 200px;
+        max-height: 300px;
+        overflow: auto;
+      "
+    >
+      <button id="throttleBtn" onclick="throttleBtnClick()">
+        节流按钮(疯狂点击)
+      </button>
+      <div>
+        <div id="throttleClickRecords" style="width: 400px; float: left"></div>
+        <div id="throttleRunRecords" style="float: left"></div>
+      </div>
+    </div>
+  </body>
+</html>
