@@ -32,12 +32,12 @@
         throttleBtnCount++;
         let resultZone = document.querySelector("#throttleClickRecords");
         let span = document.createElement("span");
-        span.innerHTML = `<br/>${getCurTime()}:<span>限流按钮第${throttleBtnCount}次点击 ==> <span>`;
+        span.innerHTML = `<br/>${getCurTime()}:<span>节流按钮第${throttleBtnCount}次点击 ==> <span>`;
         resultZone.appendChild(span);
 
         throttleFun(
           "#throttleRunRecords",
-          `<br/>${getCurTime()}:<span>限流按钮第${throttleBtnCount}次事件运行<span>`
+          `<br/>${getCurTime()}:<span>节流按钮第${throttleBtnCount}次事件运行<span>`
         );
       }
 
