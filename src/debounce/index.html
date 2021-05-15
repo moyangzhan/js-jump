@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <title>防抖</title>
+  <script type="text/javascript" src="./debounce.js"></script>
+  <script type="text/javascript">
+    let debounceFun = null;
+    function getCurTime() {
+      let now = new Date();
+      return (
+        now.getMinutes() +
+        ":" +
+        now.getSeconds() +
+        "." +
+        now.getMilliseconds()
+      );
+    }
+
+    function runInNormal(resultSelector, runTxt) {
+      let resultZone = document.querySelector(resultSelector);
+      let span = document.createElement("span");
+      span.innerHTML = runTxt;
+      resultZone.appendChild(span);
+    }
+
+    function runInDebounce(resultSelector, runTxt) {
+      let resultZone = document.querySelector(resultSelector);
+      let span = document.createElement("span");
+      span.innerHTML = runTxt;
+      resultZone.appendChild(span);
+    }
+
+    function init() {
+      debounceFun = debounce(runInDebounce, 500);
+    }
+
+    function onResize() {
+      runInNormal(
+        "#normalRunRecords",
+        `<br/>${getCurTime()}:<span>拖拽中。。。<span>`
+      );
+      debounceFun(
+        "#debounceRunRecords",
+        `<br/>${getCurTime()}:<span>拖拽中。。。<span>`
+      )
+    }
+  </script>
+</head>
+
+<body onload="init()" onresize="onResize()">
+  <div>改变界面大小以查看效果</div>
+  <div style="
+        border: 1px solid lightgray;
+        min-height: 200px;
+        max-height: 300px;
+        overflow: auto;
+      ">
+    <div>
+      <div>非防抖效果：</div>
+      <div id="normalRunRecords" style="float: left"></div>
+    </div>
+  </div>
+  <div style="
+        border: 1px solid lightgray;
+        min-height: 200px;
+        max-height: 300px;
+        overflow: auto;
+      ">
+    <div>
+      <div>防抖效果：</div>
+      <div id="debounceRunRecords" style="float: left"></div>
+    </div>
+  </div>
+</body>
+
+</html>
