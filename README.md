@@ -24,9 +24,9 @@ js开发实践及常见问题解决方法
 
 [节流](https://github.com/moyangzhan/js-jump/issues/9)
 
-防抖
+[防抖](https://github.com/moyangzhan/js-jump/issues/10)
 
-图片懒加载
+[图片懒加载](https://github.com/moyangzhan/js-jump/issues/11)
 
 长列表优化
 
