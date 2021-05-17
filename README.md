@@ -4,21 +4,21 @@ js开发实践及常见问题解决方法
 
 一、规范
 
-1. [明确所要兼容的浏览器版本](https://github.com/moyangzhan/js-jump/issues/1)
+[明确所要兼容的浏览器版本](https://github.com/moyangzhan/js-jump/issues/1)
 
-1. [删除无用代码，而不是注释它](https://github.com/moyangzhan/js-jump/issues/2)
+[删除无用代码，而不是注释它](https://github.com/moyangzhan/js-jump/issues/2)
 
-1. [为方法入参设置默认值](https://github.com/moyangzhan/js-jump/issues/3)
+[为方法入参设置默认值](https://github.com/moyangzhan/js-jump/issues/3)
 
-1. [设置圈复杂度](https://github.com/moyangzhan/js-jump/issues/4)
+[设置圈复杂度](https://github.com/moyangzhan/js-jump/issues/4)
 
-1. [限定文件最大代码行数](https://github.com/moyangzhan/js-jump/issues/5)
+[限定文件最大代码行数](https://github.com/moyangzhan/js-jump/issues/5)
 
-1. [明确指出http请求所需参数及默认值](https://github.com/moyangzhan/js-jump/issues/6)
+[明确指出http请求所需参数及默认值](https://github.com/moyangzhan/js-jump/issues/6)
 
-1. [优先使用===或Object.is()，尽量避免使用==](https://github.com/moyangzhan/js-jump/issues/7)
+[优先使用===或Object.is()，尽量避免使用==](https://github.com/moyangzhan/js-jump/issues/7)
 
-1. [避免多重嵌套](https://github.com/moyangzhan/js-jump/issues/8)
+[避免多重嵌套](https://github.com/moyangzhan/js-jump/issues/8)
 
 二、性能
 
