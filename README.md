@@ -79,3 +79,17 @@ promise中reject后面不应再有执行语句
 列表查找
 
 树的查找
+
+六、一些概念
+
+混入(mixin)
+
+数据劫持
+
+ast
+
+代理
+
+虚拟dom
+
+ps：相关内容在[gitee](https://gitee.com/moyangzhan/js-jump)上同步更新
